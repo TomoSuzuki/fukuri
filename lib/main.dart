@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Fukuri'),
+      home: const MyHomePage(title: 'compound interest calculation'),
     );
   }
 }
@@ -32,13 +32,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   double _simpleinterest = 100;
-  double _result = 100;
+  double _result = 100.0;
+  String _disp = '100.0';
 
   void _incrementCounter() {
     setState(() {
       _counter++;
       _simpleinterest = _simpleinterest + 5.0;
       _result = _result * 1.05;
+      _disp = _result.toStringAsFixed(1);
     });
   }
 
@@ -64,14 +66,14 @@ class _MyHomePageState extends State<MyHomePage> {
               'simple interest 5% :',
             ),
             Text(
-              '$_simpleinterest',
+              '\$ $_simpleinterest',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             const Text(
-              'result of compound interest calculation:',
+              'result of compound interest calculation 5%:',
             ),
             Text(
-              '$_result',
+              '\$ $_disp',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
