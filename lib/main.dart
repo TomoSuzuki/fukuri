@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   double _simpleinterest = 100;
   double _result = 100.0;
   String _disp = '100.0';
-  List<String> fruits = ['りんご', 'ぶどう', 'みかん'];
+  //List<String> fruits = ['りんご', 'ぶどう', 'みかん'];
 
   void _incrementCounter() {
     setState(() {
